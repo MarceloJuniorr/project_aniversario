@@ -38,7 +38,7 @@ const Footer = () => {
 
           {/* Admin Button */}
           <a 
-            href="/admin.html"
+            href="/admin"
             className="mt-6 flex items-center gap-2 px-4 py-2 rounded-lg border transition-all duration-300 hover:scale-105"
             style={{ 
               borderColor: `${colors.accent}66`,
