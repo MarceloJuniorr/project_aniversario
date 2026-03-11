@@ -418,6 +418,7 @@ export const ConfigProvider: React.FC<{ children: React.ReactNode }> = ({ childr
   const deleteGuest = async (id: string) => {
     try {
       // Primeiro, deletar os acompanhantes ( CASCADE deve fazer isso, mas garantimos manualmente )
+      console.log('Deleting companions for guest ID:', id);
       const { error: companionsError } = await supabase
         .from('companions')
         .delete()
@@ -428,6 +429,7 @@ export const ConfigProvider: React.FC<{ children: React.ReactNode }> = ({ childr
       }
 
       // Depois, deletar o convidado
+      console.log('Deleting guest ID:', id);
       const { error } = await supabase
         .from('guests')
         .delete()

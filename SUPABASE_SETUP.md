@@ -91,6 +91,11 @@ CREATE POLICY "Allow public read on guests" ON guests
 -- Permitir atualização pública
 CREATE POLICY "Allow public update on guests" ON guests
   FOR UPDATE TO PUBLIC USING (true) WITH CHECK (true);
+
+-- Permitir exclusão pública
+CREATE POLICY "Allow public delete on guests" ON guests
+  FOR DELETE TO PUBLIC USING (true);
+```
 ```
 
 ### Tabela `companions`
@@ -110,6 +115,11 @@ CREATE POLICY "Allow public read on companions" ON companions
 -- Permitir atualização pública
 CREATE POLICY "Allow public update on companions" ON companions
   FOR UPDATE TO PUBLIC USING (true) WITH CHECK (true);
+
+-- Permitir exclusão pública
+CREATE POLICY "Allow public delete on companions" ON companions
+  FOR DELETE TO PUBLIC USING (true);
+```
 ```
 
 ### Tabela `site_configurations`
